@@ -22,8 +22,8 @@ impl ServiceDefinition for Homepage {
         Pattern::Endpoint(PortBase::new_tcp(3000), "/site.webmanifest", "Homepage")
     }
 
-    fn dashboard_icons_path(&self) -> &'static str {
-        "homepage"
+    fn logo_url(&self) -> &'static str {
+        "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/homepage.svg"
     }
 }
 

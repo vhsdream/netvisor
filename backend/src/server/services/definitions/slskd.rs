@@ -22,8 +22,8 @@ impl ServiceDefinition for Slskd {
         Pattern::Endpoint(PortBase::new_tcp(5030), "/", "slskd")
     }
 
-    fn dashboard_icons_path(&self) -> &'static str {
-        "slskd"
+    fn logo_url(&self) -> &'static str {
+        "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/slskd.svg"
     }
 }
 

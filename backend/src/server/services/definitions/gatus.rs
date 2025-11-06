@@ -22,8 +22,8 @@ impl ServiceDefinition for Gatus {
         Pattern::Endpoint(PortBase::Http, "/manifest.json", "Gatus")
     }
 
-    fn dashboard_icons_path(&self) -> &'static str {
-        "gatus"
+    fn logo_url(&self) -> &'static str {
+        "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/gatus.svg"
     }
 }
 
