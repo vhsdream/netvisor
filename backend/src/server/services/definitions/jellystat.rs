@@ -21,7 +21,7 @@ impl ServiceDefinition for Jellystat {
     fn discovery_pattern(&self) -> Pattern<'_> {
         Pattern::AllOf(vec![
             Pattern::Endpoint(PortBase::new_tcp(3000), "/", "Jellystat"),
-            Pattern::Endpoint(PortBase::new_tcp(3000), "/" "Jellyfin stats for the masses")
+            Pattern::Endpoint(PortBase::new_tcp(3000), "/", "Jellyfin stats for the masses")
         ])
     }
 
