@@ -19,10 +19,11 @@ impl ServiceDefinition for Overseerr {
     }
 
     fn discovery_pattern(&self) -> Pattern<'_> {
-        Pattern::AllOf(vec![
-            Pattern::Endpoint(PortBase::new_tcp(5055), "/", "Overseerr"),
-            Pattern::Not(&Pattern::Endpoint(PortBase::new_tcp(5055), "/", "Jellyseerr"))
-        ])
+        Pattern::Endpoint(
+            PortBase::new_tcp(5055),
+            "/site.webmanifest",
+            "Overseerr"
+        )
     }
 
     fn logo_url(&self) -> &'static str {
