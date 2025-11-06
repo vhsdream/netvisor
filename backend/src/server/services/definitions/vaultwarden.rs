@@ -19,11 +19,15 @@ impl ServiceDefinition for Vaultwarden {
     }
 
     fn discovery_pattern(&self) -> Pattern<'_> {
-        Pattern::Endpoint(PortBase::Http, "/", "vaultwarden web")
+        Pattern::Endpoint(PortBase::new_tcp(8000), "/", "Vaultwarden")
     }
 
     fn logo_url(&self) -> &'static str {
         "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/vaultwarden.svg"
+    }
+
+    fn logo_needs_white_background(&self) -> bool {
+        true
     }
 }
 

@@ -19,7 +19,7 @@ impl ServiceDefinition for PaperlessNGX {
     }
 
     fn discovery_pattern(&self) -> Pattern<'_> {
-        Pattern::Endpoint(PortBase::Http, "/", "paperless-ngx web")
+        Pattern::Endpoint(PortBase::new_tcp(8000), "/accounts/login/", "Paperless-ngx project")
     }
 
     fn logo_url(&self) -> &'static str {

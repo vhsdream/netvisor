@@ -19,7 +19,7 @@ impl ServiceDefinition for Karakeep {
     }
 
     fn discovery_pattern(&self) -> Pattern<'_> {
-        Pattern::Endpoint(PortBase::new_tcp(3000), "/signin", "karakeep")
+        Pattern::Endpoint(PortBase::new_tcp(3000), "/signin", "Karakeep")
     }
 
     fn logo_url(&self) -> &'static str {
