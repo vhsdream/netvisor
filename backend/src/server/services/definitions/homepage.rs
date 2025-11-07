@@ -23,7 +23,7 @@ impl ServiceDefinition for Homepage {
     }
 
     fn logo_url(&self) -> &'static str {
-        "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/svg/homepage.svg"
+        "https://cdn.jsdelivr.net/gh/homarr-labs/dashboard-icons/webp/homepage.webp"
     }
 }
 
