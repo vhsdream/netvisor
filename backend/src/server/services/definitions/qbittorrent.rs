@@ -5,9 +5,9 @@ use crate::server::services::types::definitions::ServiceDefinition;
 use crate::server::services::types::patterns::Pattern;
 
 #[derive(Default, Clone, Eq, PartialEq, Hash)]
-pub struct qBittorrent;
+pub struct QBittorrent;
 
-impl ServiceDefinition for qBittorrent {
+impl ServiceDefinition for QBittorrent {
     fn name(&self) -> &'static str {
         "qBittorrent"
     }
@@ -30,4 +30,4 @@ impl ServiceDefinition for qBittorrent {
     }
 }
 
-inventory::submit!(ServiceDefinitionFactory::new(create_service::<qBittorrent>));
+inventory::submit!(ServiceDefinitionFactory::new(create_service::<QBittorrent>));
