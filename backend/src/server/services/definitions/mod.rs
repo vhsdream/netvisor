@@ -62,7 +62,7 @@ pub mod autobrr;
 pub mod bazarr;
 pub mod bind9;
 // pub mod booklore;
-// pub mod caddy;
+pub mod caddy;
 // pub mod calibre_web;
 pub mod camera;
 pub mod chromecast;
