@@ -146,7 +146,7 @@ pub mod prometheus;
 pub mod prowlarr;
 pub mod proxmox;
 // pub mod proxmox_backup_server;
-// pub mod pulse;
+pub mod pulse;
 pub mod qbittorrent;
 pub mod qnap;
 pub mod radarr;
