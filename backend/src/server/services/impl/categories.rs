@@ -32,6 +32,7 @@ pub enum ServiceCategory {
     Media,          // Plex, Jellyfin
     HomeAutomation, // Home Assistant
     Virtualization, // Proxmox, ESXi
+    MessageQueue,   // Backend comms/event streaming - MQTT, Kafka
 
     // Network Services
     DNS,        // All DNS services
@@ -77,13 +78,14 @@ impl EntityMetadataProvider for ServiceCategory {
             ServiceCategory::Media => "PlayCircle",
             ServiceCategory::HomeAutomation => "Home",
             ServiceCategory::Virtualization => Entity::Virtualization.icon(),
+            ServiceCategory::Backup => "DatabaseBackup",
+            ServiceCategory::MessageQueue => "ChevronsLeftRightEllipsis",
 
             // Network Services
             ServiceCategory::DNS => Entity::Dns.icon(),
             ServiceCategory::VPN => Entity::Vpn.icon(),
             ServiceCategory::Monitoring => "Activity",
             ServiceCategory::AdBlock => "ShieldCheck",
-            ServiceCategory::Backup => "DatabaseBackup",
             ServiceCategory::ReverseProxy => Entity::ReverseProxy.icon(),
 
             // End devices
@@ -118,6 +120,7 @@ impl EntityMetadataProvider for ServiceCategory {
             ServiceCategory::HomeAutomation => "blue",
             ServiceCategory::Virtualization => Entity::Virtualization.color(),
             ServiceCategory::Backup => "gray",
+            ServiceCategory::MessageQueue => "yellow",
 
             // Network Services
             ServiceCategory::DNS => Entity::Dns.color(),
