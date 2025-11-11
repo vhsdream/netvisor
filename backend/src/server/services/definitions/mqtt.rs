@@ -5,14 +5,14 @@ use crate::server::services::r#impl::definitions::ServiceDefinition;
 use crate::server::services::r#impl::patterns::Pattern;
 
 #[derive(Default, Clone, Eq, PartialEq, Hash)]
-pub struct WebService;
+pub struct Mqtt;
 
-impl ServiceDefinition for WebService {
+impl ServiceDefinition for Mqtt {
     fn name(&self) -> &'static str {
         "mqtt"
     }
     fn description(&self) -> &'static str {
-        "A generic mqtt Service"
+        "A generic MQTT Service"
     }
     fn category(&self) -> ServiceCategory {
         ServiceCategory::MessageQueue
@@ -30,4 +30,4 @@ impl ServiceDefinition for WebService {
     }
 }
 
-inventory::submit!(ServiceDefinitionFactory::new(create_service::<WebService>));
+inventory::submit!(ServiceDefinitionFactory::new(create_service::<Mqtt>));
