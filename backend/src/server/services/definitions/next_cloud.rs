@@ -24,13 +24,13 @@ impl ServiceDefinition for NextCloud {
                 PortBase::Http,
                 "/core/css/server.css",
                 "Nextcloud GmbH",
-                None,
+                Some(200..300),
             ),
             Pattern::Endpoint(
                 PortBase::Https,
                 "/core/css/server.css",
                 "Nextcloud GmbH",
-                None,
+                Some(200..300),
             ),
         ])
     }
