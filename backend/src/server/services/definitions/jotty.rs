@@ -22,8 +22,8 @@ impl ServiceDefinition for Jotty {
         Pattern::Endpoint(
             PortBase::Http3000,
             "/site.webmanifest",
-            "jotty·page",
-            Some(307..307),
+            "jotty",
+            Some(200..200),
         )
     }
 
