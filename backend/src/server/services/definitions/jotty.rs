@@ -19,7 +19,12 @@ impl ServiceDefinition for Jotty {
     }
 
     fn discovery_pattern(&self) -> Pattern<'_> {
-        Pattern::Endpoint(PortBase::Http3000, "/site.webmanifest", "jotty·page", None)
+        Pattern::Endpoint(
+            PortBase::Http3000,
+            "/site.webmanifest",
+            "jotty·page",
+            Some(307..307),
+        )
     }
 
     fn logo_url(&self) -> &'static str {
