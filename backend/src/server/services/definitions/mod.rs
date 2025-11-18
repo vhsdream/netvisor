@@ -191,6 +191,7 @@ pub mod jira_server;
 pub mod mattermost;
 pub mod radicale;
 pub mod rocket_chat;
+pub mod wikijs;
 
 // Development
 pub mod ansible_awx;
