@@ -22,7 +22,7 @@ impl ServiceDefinition for BookLore {
         Pattern::AllOf(vec![
             Pattern::Endpoint(PortBase::new_tcp(6060), "/", "BookLore", None),
             Pattern::Endpoint(
-                PortBase::new_tcp(6060),
+                PortBase::Http8080,
                 "/ap1/v1/setup/status",
                 "Initial setup",
                 None,
