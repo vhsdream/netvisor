@@ -128,6 +128,7 @@ pub mod veeam;
 
 // Media
 pub mod audiobookshelf;
+pub mod booklore;
 pub mod emby;
 pub mod immich;
 pub mod jellyfin;
