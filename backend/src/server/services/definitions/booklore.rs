@@ -20,7 +20,7 @@ impl ServiceDefinition for BookLore {
 
     fn discovery_pattern(&self) -> Pattern<'_> {
         Pattern::AllOf(vec![
-            Pattern::Endpoint(PortBase::new_tcp(6060), "/", "BookLore", None),
+            Pattern::Endpoint(PortBase::new_tcp(6060), "/", "booklore-app", None),
             Pattern::Endpoint(PortBase::Http8080, "/", "", Some(403..403)),
         ])
     }
